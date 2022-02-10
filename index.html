@@ -5,11 +5,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega</title>
+    <link href="Styles/style.css" rel="stylesheet">
+    <title>Projeto HTML</title>
+
 </head>
 
 <body>
+    <header>
 
+        <div class="mark-title">
+            <img src="./public/assets/Ellipse 13.svg" alt="" class="img-logo">
+            <p>Controle financeiro</p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <span>|</span>
+                <li><a href="#">Resumo</a></li>
+                <span>|</span>
+                <li><a href="#">Configurações</a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <main>
+
+        <div class="container-transaction">
+            <h3>Nova transação</h3>
+
+            <div class="fields-container">
+                <p>Tipo de transação</p>
+                <select name="transction">
+                    <option value="valor2" selected>Compra</option>
+                    <option value="valor3">Venda</option>
+                </select>
+
+            </div>
+
+            <div class="fields-container">
+                <p>Nome da mercadoria</p>
+                <input type="text">
+            </div>
+
+            <div class="fields-container">
+                <p>Valor</p>
+                <input placeholder="R$ 0,00" id="valor" name="valor">
+            </div>
+
+            <div class="fields-container">
+                <button>Adicionar transação</button>
+            </div>
+        </div>
+
+        <div class="container-extract">
+
+            <h3>Extrato de transações</h3>
+
+            <div class="extract-first-line">
+                <p>Mercadoria</p>
+                <p>Valor</p>
+            </div>
+
+            <hr>
+
+            <div class="extract-itens-line">
+                <div class="instruct-item">
+                    <p class="declaration">+</p>
+                    <p class="text-declaration">Lorem ipsum dolor sit amet consectetur</p>
+                </div>
+                <p>R$ 12.999,99</p>
+            </div>
+
+            <hr>
+
+            <div class="extract-itens-line">
+                <div class="instruct-item">
+                    <p class="declaration">-</p>
+                    <p class="text-declaration">Quis nostrud exercitation</p>
+                </div>
+                <p>R$ 99,99</p>
+            </div>
+
+            <hr>
+
+            <div class="extract-itens-line">
+                <div class="instruct-item">
+                    <p class="declaration">+</p>
+                    <p class="text-declaration">Quis nostrud exercitation</p>
+                </div>
+                <p>R$ 9,99</p>
+            </div>
+
+            <hr>
+            <hr class="last-hr">
+
+            <div class="extract-first-line">
+                <p>Total</p>
+                <div>
+                    <p>R$ 12.909,99</p>
+                    <p style="text-align: end; font-size: 10px; font-weight: 400">[LUCRO]</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#valor').mask('R$ 999.999.990,00', { reverse: true });
+        });
+    </script>
 </body>
 
 </html>
