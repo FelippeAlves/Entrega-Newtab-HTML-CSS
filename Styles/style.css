@@ -123,6 +123,16 @@ button {
   line-height: 22px;
 }
 
+#errorText {
+  display: none;
+}
+
+.error-text {
+  display: flex !important;
+  justify-content: center;
+  color: red;
+}
+
 /* Div do lado direito */
 
 .container-extract {

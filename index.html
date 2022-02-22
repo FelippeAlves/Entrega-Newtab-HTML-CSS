@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="Styles/style.css" rel="stylesheet">
+    <script type="text/javascript" src="JS/index.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Projeto HTML</title>
 
@@ -67,8 +68,8 @@
                 <div class="fields-container first-container">
                     <p>Tipo de transação</p>
                     <select name="transction" id="transacao">
-                        <option value="valor2" selected>Compra</option>
-                        <option value="valor3">Venda</option>
+                        <option value="Compra" selected>Compra</option>
+                        <option value="Venda">Venda</option>
                     </select>
 
                 </div>
@@ -83,15 +84,19 @@
                     <input placeholder="R$ 0,00" id="valor" name="valor">
                 </div>
 
+                <div id="errorText">
+                    <p>Todos os campos devem ser preenchidos</p>
+                </div>
+
             </div>
             <div class="fields-container align-btn">
-                <button class="btn-mobile">Adicionar transação</button>
+                <button class="btn-mobile" onclick="validarDados()">Adicionar transação</button>
             </div>
         </div>
 
         <hr class="hr-mobile">
 
-        <div class="container-extract">
+        <div id="lista" class="container-extract">
 
             <h3>Extrato de transações</h3>
 
@@ -100,7 +105,7 @@
                 <p>Valor</p>
             </div>
 
-            <hr>
+            <!-- <hr>
 
             <div class="extract-itens-line">
                 <div class="instruct-item">
@@ -128,18 +133,18 @@
                     <p class="text-declaration">Quis nostrud exercitation</p>
                 </div>
                 <p>R$ 9,99</p>
-            </div>
+            </div> -->
 
-            <hr>
-            <hr class="last-hr">
+            <!-- <hr>
+            <hr class="last-hr"> -->
 
-            <div class="extract-last-line">
+            <!-- <div class="extract-last-line">
                 <p>Total</p>
                 <div>
                     <p>R$ 12.909,99</p>
                     <p style="text-align: end; font-size: 10px; font-weight: 400">[LUCRO]</p>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 
