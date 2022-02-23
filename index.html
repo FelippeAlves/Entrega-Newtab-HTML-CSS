@@ -23,7 +23,7 @@
 
         <nav class="first-nav">
             <ul class="first-ul">
-                <li onclick="deletarRecords()"><a>Limpar dados</a></li>
+                <li onclick="iniciaModal()"><a>Limpar dados</a></li>
                 <span>|</span>
                 <li><a href="#">Cadastro de transações</a></li>
             </ul>
@@ -46,7 +46,7 @@
                         </label>
                         <li><a href="#">Cadastro de transações</a></li>
 
-                        <li onclick="deletarRecords()"><a>Limpar dados</a></li>
+                        <li onclick="iniciaModal()"><a>Limpar dados</a></li>
 
                     </ul>
                 </nav>
@@ -102,50 +102,21 @@
                 <p>Valor</p>
             </div>
 
-            <!-- <hr>
-
-            <div class="extract-itens-line">
-                <div class="instruct-item">
-                    <p class="declaration">+</p>
-                    <p class="text-declaration">Lorem ipsum dolor sit amet consectetur</p>
-                </div>
-                <p>R$ 12.999,99</p>
-            </div>
-
-            <hr>
-
-            <div class="extract-itens-line">
-                <div class="instruct-item">
-                    <p class="declaration">-</p>
-                    <p class="text-declaration">Quis nostrud exercitation</p>
-                </div>
-                <p>R$ 99,99</p>
-            </div>
-
-            <hr>
-
-            <div class="extract-itens-line">
-                <div class="instruct-item">
-                    <p class="declaration">+</p>
-                    <p class="text-declaration">Quis nostrud exercitation</p>
-                </div>
-                <p>R$ 9,99</p>
-            </div> -->
-
-            <!-- <hr>
-            <hr class="last-hr"> -->
-
-            <!-- <div class="extract-last-line">
-                <p>Total</p>
-                <div>
-                    <p>R$ 12.909,99</p>
-                    <p style="text-align: end; font-size: 10px; font-weight: 400">[LUCRO]</p>
-                </div>
-            </div> -->
-
         </div>
 
     </main>
+
+    <div id="modal-confirmacao" class="modal-container">
+        <div class="modal">
+            <button class="fechar-modal" onclick="fecharModal()">x</button>
+            <p>Você tem certeza que deseja apagar todos os extratos?</p>
+            <div class="div-btn-modal">
+                <input type="button" value="Confirmar" class="btn-modal" id="btn-confirma" onclick="deletarRecords()">
+                <input type="button" value="Cancelar" onclick="fecharModal()" class="btn-modal">
+            </div>
+        </div>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>

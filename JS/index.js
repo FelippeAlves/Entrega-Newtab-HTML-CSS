@@ -94,6 +94,7 @@ async function deletarRecords() {
             })
     })
     await handleReload();
+    fecharModal();
 }
 
 document.addEventListener("DOMContentLoaded", async function atualizarLista(){
@@ -284,6 +285,16 @@ function tratarErro() {
         let p = document.createElement('p');
         p.innerText = 'Não há transações cadastradas';
         lista.append(p);
+}
+
+function iniciaModal() {
+    const modal = document.getElementById('modal-confirmacao')
+    modal.classList.add('mostrar-modal')
+}
+
+function fecharModal() {
+    const modal = document.getElementById('modal-confirmacao')
+    modal.classList.remove('mostrar-modal')
 }
 
 
