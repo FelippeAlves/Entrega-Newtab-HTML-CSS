@@ -23,11 +23,9 @@
 
         <nav class="first-nav">
             <ul class="first-ul">
-                <li><a href="#">Dashboard</a></li>
+                <li onclick="deletarRecords()"><a>Limpar dados</a></li>
                 <span>|</span>
-                <li><a href="#">Resumo</a></li>
-                <span>|</span>
-                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Cadastro de transações</a></li>
             </ul>
         </nav>
 
@@ -46,11 +44,10 @@
                         <label for="check" class="checkbtn">
                             <img src="./public/assets/icons8-excluir.svg">
                         </label>
-                        <li><a href="#">Resumo</a></li>
+                        <li><a href="#">Cadastro de transações</a></li>
 
-                        <li><a href="#">Dashboard</a></li>
+                        <li onclick="deletarRecords()"><a>Limpar dados</a></li>
 
-                        <li><a href="#">Configurações</a></li>
                     </ul>
                 </nav>
             </div>
@@ -61,6 +58,8 @@
 
     <main>
 
+        <button onclick="filterRecords()">qualquer</button>
+
         <div class="container-transaction">
             <h3 id="title-transaction">Nova transação</h3>
 
@@ -68,8 +67,8 @@
                 <div class="fields-container first-container">
                     <p>Tipo de transação</p>
                     <select name="transction" id="transacao">
-                        <option value="Compra" selected>Compra</option>
-                        <option value="Venda">Venda</option>
+                        <option value="-" selected>Compra</option>
+                        <option value="+">Venda</option>
                     </select>
 
                 </div>
