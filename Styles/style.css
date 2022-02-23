@@ -35,6 +35,10 @@ ul span {
   color: #979797;
 }
 
+nav ul li {
+  cursor: pointer;
+}
+
 .first-ul {
   display: flex;
   background-color: #ffffff;
@@ -56,6 +60,10 @@ ul span {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
+}
+
+#transacao {
+  cursor: pointer;
 }
 
 /* Estilos de elementos do main */
@@ -121,6 +129,7 @@ button {
   border-radius: 4px;
   height: 4vh;
   line-height: 22px;
+  cursor: pointer;
 }
 
 #errorText {
