@@ -450,7 +450,7 @@ hr {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 516px) {
   #title-transaction {
     display: none;
   }

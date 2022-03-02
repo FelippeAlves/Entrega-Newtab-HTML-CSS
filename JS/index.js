@@ -108,7 +108,8 @@ document.addEventListener("DOMContentLoaded", async function atualizarLista(){
         if ( response.records.length != 0) {
             let record = JSON.parse(response.records[0].fields.Json);
             record.map(function (item) {
-                let valorInt = item.value.replace(',' , '.');
+                let valorInt = item.value.replace('.' , '');
+                valorInt = valorInt.replace(',' , '.');
                 valorInt = parseFloat(valorInt);
                 if( item.type === '-') {
                     total-= valorInt;
@@ -158,6 +159,8 @@ document.addEventListener("DOMContentLoaded", async function atualizarLista(){
                 total = parseFloat(total.toFixed(2))
             }
             total = total.toString()
+            let formatterBRL = new Intl.NumberFormat('pt-BR');
+            total = formatterBRL.format(total);
             elemento_p1.innerText = 'R$ '+ total;
             if (total[0] === '-') {
                 elemento_p2.innerText = '[DÉBITO]';
@@ -203,7 +206,8 @@ async function handleReload(){
             lista.appendChild(div_first_line)
             let record = JSON.parse(response.records[0].fields.Json);
             record.map( function (item) {
-                let valorInt = item.value.replace(',' , '.');
+                let valorInt = item.value.replace('.' , '');
+                valorInt = valorInt.replace(',' , '.');
                 valorInt = parseFloat(valorInt);
                 if( item.type === '-') {
                     total-= valorInt;
@@ -252,8 +256,11 @@ async function handleReload(){
             } else {
                 total = parseFloat(total.toFixed(2))
             }
+
             elemento_p1.innerText = 'R$ '+ total;
             total = total.toString()
+            let formatterBRL = new Intl.NumberFormat('pt-BR');
+            total = formatterBRL.format(total)
             elemento_p1.innerText = 'R$ '+ total;
             if (total[0] === '-') {
                 elemento_p2.innerText = '[DÉBITO]';
@@ -296,7 +303,6 @@ function fecharModal() {
     const modal = document.getElementById('modal-confirmacao')
     modal.classList.remove('mostrar-modal')
 }
-
 
 
 
